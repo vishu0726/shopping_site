@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Cart } from "./Containers/Cart/Cart";
+import Footer from "./Containers/Footer/Footer";
+import Header from "./Containers/Header/Header";
+import { Login } from "./Containers/Login/Login";
+import ProductDetails from "./Containers/ProductDetails/ProductDetails";
+import ProductPage from "./Containers/ProductList/ProductList";
+import { SignUp } from "./Containers/SignUp/SignUp";
 
 function App() {
+
+  useEffect(() => {
+    localStorage.setItem('user',JSON.stringify([]));
+    localStorage.setItem('cart',JSON.stringify([]));
+    return () => {
+      localStorage.clear();
+    }
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <header><Header/></header>
+      <main>
+        <Routes>
+          <Route path="/" exact element={<ProductPage/>} />
+          <Route path="/product/:productId" element={<ProductDetails/>} />
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/signup" element={<SignUp/>}/>
+          <Route path="/cart" element={<Cart/>}/>
+          <Route path="*" element={<div>Page does not exists</div>}/>
+        </Routes>
+      </main>
+        {/* <footer><Footer/></footer> */}
     </div>
   );
 }
