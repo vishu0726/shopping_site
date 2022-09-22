@@ -1,7 +1,7 @@
 import React from "react";
 import './header.css'
 import {FaShopify, FaSearch,FaCartPlus } from 'react-icons/fa'
-import { Login } from "../Login/Login";
+import { Login } from "../Login/Login"; 
 import { useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
   const userState = useSelector((state) => state.user);
   return (
     <nav className="header">
-      <h2><NavLink to={'/'} className="logo">E<FaShopify/>SHOPPING </NavLink></h2>
+      <h2><NavLink to={'/'} className="logo">E<FaShopify/>SHOPPING</NavLink></h2>
     <ul className="header-right">
       <li>
         <div className="input-button-div">

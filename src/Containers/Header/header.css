@@ -1,8 +1,9 @@
 .header{
     width: 100%;
     display: flex;
-    background-color: peachpuff;
+    background-color: rgb(220, 210, 203);
   }
+
   .logo{
     display: flex;
     margin-top: 10px;
@@ -10,9 +11,11 @@
     border-radius: none;
     text-decoration: none;
   }
+
   select{
     width: 15%;
   }
+
   .input-button-div{
     position:relative;
     width: fit-content;
@@ -20,18 +23,22 @@
     width: 100%;
     background-color: white;
   }
+
   .search-button{
     border-style: none;
     background-color: white;
     margin-right: 4px;
   }
+
   .login-name {
     text-decoration: none;
     color: #000;
   }
+
   .scroll-down{
     color: #000;
   }
+
   .nav-input{
       padding: 0 16px;
       border-radius: 2px 0 0 2px;
@@ -41,12 +48,14 @@
       height: 36px;
       width: 100%;
   }
+
   .header-right {
     width: 100%;
    display: flex;
-   justify-content: right;
+   justify-content: end;
   }
-  li {
+
+  li{
       padding: 5px;
     /* text-transform: uppercase; */
     cursor: pointer;
@@ -62,7 +71,6 @@
       font-weight: bold;
   }
   
-  
   .shameless-plug{
     position: absolute;
     bottom: 10px;
@@ -72,93 +80,3 @@
     text-decoration: none;
   }
   
-  /* Login page css */
-  
-  .login-page {
-    /* width: 50%; */
-    /* height: auto; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    margin-top: 100px;
-    /* background-color: aquamarine; */
-    /* position: relative; */
-  }
-  .signin-input {
-    border-style: double;
-    border-radius: 10px;
-    margin: 5px;
-  }
-  .login-button {
-    border-style: none;
-    margin-top: 9px;
-    font-style: oblique;
-    background-color: rgb(34, 209, 222);
-    border-radius: 10px;
-    font-size: large;
-    box-shadow: 0px 3px 4px 0px;
-  }
-  .login-button:hover {
-    border-style: none;
-    margin-top: 9px;
-    font-style: oblique;
-    background-color: rgb(57, 43, 31);
-    color: white;
-    border-radius: 10px;
-    font-size: large;
-    box-shadow: 0px 3px 0px 3px rgba(0, 0, 0, 0.2);
-  }
-  .signup-warning{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-top: 9px;
-  }
-  .signup-button{
-    width: fit-content;
-    align-items: center;
-    font-style: oblique;
-    background-color: yellowgreen;
-    margin-left: 47.5%;
-    margin-top: 8px;
-    border: none;
-    color: #000;
-    font-size: large;
-    border-radius: 20px;
-    box-shadow: 0px 2px 0px 3px rgba(0, 0, 0, 0.2);
-  }
-  .signup-button:hover{
-    width: fit-content;
-    align-items: center;
-    font-style: oblique;
-    background-color: rgb(50, 112, 205);
-    margin-left: 47.5%;
-    margin-top: 8px;
-    border: none;
-    color: #fff;
-    font-size: large;
-    border-radius: 20px;
-    box-shadow: 0px 2px 0px 3px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* sign up section */
-  .signup-header {
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  .signingup-button {
-    width: fit-content;
-    align-items: center;
-    font-style: oblique;
-    background-color: yellowgreen;
-    /* margin-left: 47.5%; */
-    margin-top: 8px;
-    border: none;
-    color: #000;
-    font-size: large;
-    border-radius: 20px;
-    box-shadow: 0px 2px 0px 3px rgba(0, 0, 0, 0.2);
-  }

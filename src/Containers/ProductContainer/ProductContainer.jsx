@@ -16,9 +16,9 @@ const ProductComponent = () => {
                 <img className="product-image" src={image} alt={title} />
               </div>
               <div className="content">
-                <div className="header">{title}</div>
-                <div className="meta price">$ {price}</div>
-                <div className="meta">{category}</div>
+                <div className="header-product">{title}</div>
+                <div className="price">${price}</div>
+                <div className="category">{category}</div>
               </div>
             </div>
           </div>
@@ -26,7 +26,12 @@ const ProductComponent = () => {
       </div>
     );
   });
-  return <div className="product-container">{renderList}</div>;
+  return (
+    <>
+      <div className="product-container">{renderList}</div>
+      {/* <footer>hello guys</footer> */}
+    </>
+  );
 };
 
 export default ProductComponent;

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { userSignUp } from '../../redux/actions/actions'
 // import { userLoggedIn } from '../redux/actions/actions'
+import './signup.css'
 
 export const SignUp = () => {
     // const userState = useSelector((state) => state.userSignUp.users)
@@ -27,13 +28,12 @@ export const SignUp = () => {
         
         <form className='login-page' onSubmit={handleSubmit}>
             <br/>
-            <h2 className='signup-header'>SignUp</h2>
-            <label htmlFor="username">UserName</label>
-            <input className='signin-input' id='username' type="text" onChange={(e) => setUserInfo({...userInfo, username: e.target.value})}/>
+            <label htmlFor="username"><h3>USERNAME</h3></label>
+            <input className='signup-input' id='username' type="text" onChange={(e) => setUserInfo({...userInfo, username: e.target.value})}/>
             <br/>
             <br/>
-            <label htmlFor="password">Password</label>
-            <input className='signin-input' id='password' type="password" onChange={(e) => setUserInfo({...userInfo, password: e.target.value})}/>
+            <label htmlFor="password"><h3>PASSWORD</h3></label>
+            <input className='signup-input' id='password' type="password" onChange={(e) => setUserInfo({...userInfo, password: e.target.value})}/>
             <br/><br/>
             <button className='signingup-button'>Sign Up</button>
         </form>
