@@ -16,8 +16,11 @@
     transform: scale(0.9);
 }
 .description {
-    margin: 5% 5% 5% 20% ;
-    /* border: 2px solid yellow; */
+    margin: 8% 5% 5% 15%;
+    padding: 20px;
+    border: 1px solid grey;
+    box-shadow: 2px 4px 3px 2px grey;
+    border-radius: 4px;
 }
 p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -25,19 +28,28 @@ p{
 .details-cart {
     font-size: large;
     color: green;
-    transition: all 1s;
-    
+    transition: all 0.3s;
+    background-color: beige;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px 2px grey;
 }
-
+.button-content{
+    padding: 1vmin;
+}
 .details-cart:hover {
-    transform: scale(1.5) rotate(360deg);
+    transform: scale(1.1);
 }
 .productTitle {
     margin-bottom: 20px;
+    color: rgb(106, 81, 78);
 }
 .productPrice {
     margin-bottom: 20px;
 }
 .details-cart{
     margin-top: 20px;
+}
+.sub-name{
+    font-size: x-large;
 }

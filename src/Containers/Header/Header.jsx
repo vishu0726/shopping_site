@@ -4,6 +4,7 @@ import {FaShopify, FaSearch,FaCartPlus } from 'react-icons/fa'
 import { Login } from "../Login/Login"; 
 import { useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
+
 const Header = () => {
   const navigate = useNavigate();
   const userState = useSelector((state) => state.user);
@@ -11,16 +12,16 @@ const Header = () => {
     <nav className="header">
       <h2><NavLink to={'/'} className="logo">E<FaShopify/>SHOPPING</NavLink></h2>
     <ul className="header-right">
-      <li>
+      {/* <li>
         <div className="input-button-div">
           <input className="nav-input" type="text"  placeholder='search for product, brands and more'/>
           <button className="search-button"><FaSearch/></button>
         </div>
-      </li>
+      </li> */}
       <li>
-        {userState.username ? <li>Welcome {userState.username}</li> : <li ><NavLink to={'/login'} className="login-name">Login</NavLink></li>}
+        {userState.username ? <li className="log-name">Welcome, {userState.username}</li> : <li><NavLink to={'/login'} className="log-name">Login</NavLink></li>}
       </li>
-      <li>
+      {/* <li>
         <label className="scroll-down" htmlFor="product">More</label>
         <select name="products" id="product" value='select'>
           <option value="select"></option>
@@ -29,9 +30,9 @@ const Header = () => {
           <option value="bag">Bag's</option>
           <option value="electronics">Electronics Item's</option>
         </select>
-      </li>
+      </li> */}
       <li>
-        <button onClick={() => navigate('/cart')}><FaCartPlus/></button>
+        <button className="cart-button" onClick={() => navigate('/cart')}><FaCartPlus/></button>
       </li>
     </ul>
     </nav>

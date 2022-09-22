@@ -51,10 +51,10 @@ const ProductDetails = () => {
               <div className="description">
                 <h1 className="productTitle">{title}</h1>
                 <h2 className="productPrice"><a >Price: ${price}</a></h2>
-                <h3 className="">{category}</h3>
+                <h3 className="sub-name">{category}</h3>
                 <p>{description}</p>
                 <div>
-                  <button className="details-cart" onClick={AddingToCart}><FaCartPlus/></button>   Add to cart
+                  <button className="details-cart" onClick={AddingToCart}><div className="button-content">ADD TO CART</div></button>   
                 </div>
               </div>
             </div>
