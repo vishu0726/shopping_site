@@ -1,5 +1,37 @@
-.cart-container {
+.cart-heading{
     text-align: center;
-    align-items: center;
-    margin: auto;
+    text-shadow: 3px 3px 2px grey;
+}
+.cart-container {
+    margin: 2rem 15rem 0 15rem;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    /* align-items: center; */
+    justify-content: center;
+    /* border: 1px solid black; */
+    background-color: #fefefe;
+    box-shadow: 2px 3px 5px 1px grey;
+}
+
+.items_in_cart{
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    margin: 1%;
+    justify-content: space-between;
+}
+.cart-container > button {
+    width: fit-content;
+    margin-left: 45%;
+    background-color: rgb(27, 27, 241);
+    color: white;
+    cursor: pointer;
+}
+.cart-container > .totalCost {
+    width: fit-content;
+    margin-left: 43%;
+    margin-bottom: 1rem;
 }

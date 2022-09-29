@@ -62,7 +62,7 @@
    align-items: center;
   }
 
-  li{
+  .header-right > li{
       padding: 5px;
     /* text-transform: uppercase; */
     cursor: pointer;

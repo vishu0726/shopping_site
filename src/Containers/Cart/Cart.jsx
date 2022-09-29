@@ -13,18 +13,29 @@ export const Cart = () => {
 
     const item = cartItem.map((ele) => {
         return (
-            <div>
-                <span>name: {ele.header}</span>
-                <div>Rate: ${ele.rate}</div>
-            </div>
+            <ul className='items_in_cart'>
+                <li className='cart-header'>{ele.header}</li>
+                <div className='cart-rate'>${ele.rate}</div>
+            </ul>
         )
     })
-    
+    const buyNow = () => {
+        const userList = JSON.parse(localStorage.getItem('user'));
+        if (userList.length !== 0) {
+            alert("Your order is placed successfully")
+        } else {
+            navigate('/login');
+        }
+    }
   return (
-    <div className='cart-container'>
-    <h2>cart</h2>
-    <div>{item}</div>
-    <div>Total Cost: ${totalAmount}</div>
-    </div>
+    <>
+        <h2 className='cart-heading'>CART</h2>
+        <div className='cart-container'>
+            <div className='cart-item'>{item}</div>
+            <hr/>
+            <div className='totalCost'>Total Cost: ${totalAmount}</div>
+            <button onClick={buyNow}>BUY NOW</button>
+        </div>
+    </>
   )
 }
