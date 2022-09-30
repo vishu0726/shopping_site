@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 import './cart.css';
 
 export const Cart = () => {
@@ -36,6 +37,7 @@ export const Cart = () => {
             <div className='totalCost'>Total Cost: ${totalAmount}</div>
             <button onClick={buyNow}>BUY NOW</button>
         </div>
+        {/* <Footer/> */}
     </>
   )
 }

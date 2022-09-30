@@ -27,3 +27,12 @@
     transform: rotate(360deg);
   }
 }
+.body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer{
+  margin-top: auto;
+  background-color: rgb(174, 114, 54);
+}

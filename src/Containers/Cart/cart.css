@@ -29,6 +29,10 @@
     background-color: rgb(27, 27, 241);
     color: white;
     cursor: pointer;
+    border: none;
+    padding: 2px;
+    border-radius: 7px;
+    box-shadow: 2px 3px 4px solid grey;
 }
 .cart-container > .totalCost {
     width: fit-content;

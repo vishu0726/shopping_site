@@ -20,9 +20,9 @@ function App() {
   },[])
 
   return (
-    <div>
+    <div className="body">
       <header><Header/></header>
-      <main>
+      <article>
         <Routes>
           <Route path="/" exact element={<ProductPage/>} />
           <Route path="/product/:productId" element={<ProductDetails/>} />
@@ -31,8 +31,8 @@ function App() {
           <Route path="/cart" element={<Cart/>}/>
           <Route path="*" element={<div>Page does not exists</div>}/>
         </Routes>
-      </main>
-        {/* <footer><Footer/></footer> */}
+      </article>
+      <footer><Footer/></footer>
     </div>
   );
 }
