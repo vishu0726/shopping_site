@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { userLoggedIn, userSignUp } from '../../redux/actions/actions';
-import Footer from '../Footer/Footer';
+// import Footer from '../Footer/Footer';
 import './login.css';
 
 export const Login = () => {

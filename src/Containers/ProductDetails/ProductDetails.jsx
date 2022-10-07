@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {selectedProduct,removeSelectedProduct, addingToCartAction, maintainCounter} from "../../redux/actions/actions";
-import {FaCartPlus } from 'react-icons/fa'
+// import {FaCartPlus } from 'react-icons/fa'
 
 const ProductDetails = () => {
   const [count,setCount] = useState(0);
