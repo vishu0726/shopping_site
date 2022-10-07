@@ -1,5 +1,5 @@
 import React, { useEffect} from "react";
-import axios from "axios";
+// import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import ProductComponent from "../ProductContainer/ProductContainer";
 import { setProducts } from "../../redux/actions/actions";
@@ -18,6 +18,7 @@ const ProductPage = () => {
 
   const fetchProducts = () => {
     fetch("https://fakestoreapi.com/products")
+    // fetch("https://api.storerestapi.com/products")
     .then((res) => {
       return res.json();
     })
@@ -30,7 +31,7 @@ const ProductPage = () => {
   }
   useEffect(() => {
     fetchProducts();
-  }, []);
+  },[]);
 
   console.log("Products :", products);
   return (

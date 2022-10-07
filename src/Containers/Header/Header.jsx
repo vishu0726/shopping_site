@@ -1,11 +1,12 @@
 import React from "react";
 import './header.css'
-import {FaShopify, FaSearch,FaCartPlus } from 'react-icons/fa'
-import { Login } from "../Login/Login"; 
+import {FaShopify,FaSearch,FaCartPlus } from 'react-icons/fa'
+// import { Login } from "../Login/Login"; 
 import { useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const count = useSelector(state => state.counter)
   const navigate = useNavigate();
   const userState = useSelector((state) => state.user);
   return (
@@ -22,7 +23,7 @@ const Header = () => {
         {userState.username ? <li className="log-name">Welcome, {userState.username}</li> : <li><NavLink to={'/login'} className="log-name">Login</NavLink></li>}
       </li>
       {/* <li>
-        <label className="scroll-down" htmlFor="product">More</label>
+        <label className="scroll-down" htmlFor="product">More:</label>
         <select name="products" id="product" value='select'>
           <option value="select"></option>
           <option value="clothing">Clothing</option>
@@ -32,7 +33,8 @@ const Header = () => {
         </select>
       </li> */}
       <li>
-        <button className="cart-button" onClick={() => navigate('/cart')}><FaCartPlus/></button>
+        <button data-count="8" className="cart-button" onClick={() => navigate('/cart')}><FaCartPlus/></button>
+        {/* <span>{count}</span> */}
       </li>
     </ul>
     </nav>

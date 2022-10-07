@@ -35,3 +35,9 @@ export const addingToCartAction = (product) => {
     payload: product
   }
 }
+export const maintainCounter = (count) => {
+  return {
+    type : 'maintain-counter',
+    payload : count
+  }
+}

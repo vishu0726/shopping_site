@@ -2,6 +2,7 @@
     background-color: rgb(74, 72, 70);
     color: white;
     cursor: pointer;
+    /* margin-top: 3rem; */
 }
 .outer{
     display: flex;
@@ -17,5 +18,9 @@
 }
 .footer-bottom{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin: 0 15px;
+}
+.icon{
+    color: royalblue;
 }

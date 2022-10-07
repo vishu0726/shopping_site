@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import './productDetails.css'
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import {selectedProduct,removeSelectedProduct, addingToCartAction} from "../../redux/actions/actions";
+import {selectedProduct,removeSelectedProduct, addingToCartAction, maintainCounter} from "../../redux/actions/actions";
 import {FaCartPlus } from 'react-icons/fa'
 
 const ProductDetails = () => {
+  const [count,setCount] = useState(0);
   const { productId } = useParams();
   const navigate = useNavigate();
   
@@ -33,6 +34,8 @@ const ProductDetails = () => {
   }, [productId]);
 
   const AddingToCart = () => {
+    setCount(prev => prev+1);
+    dispatch(maintainCounter(count));
     const cart = JSON.parse(localStorage.getItem('cart'));
     cart.push({header:title,rate:price});
     console.log(title,price);
@@ -50,7 +53,7 @@ const ProductDetails = () => {
               <div className="img-tag"><img src={image}/></div>
               <div className="description">
                 <h1 className="productTitle">{title}</h1>
-                <h2 className="productPrice"><a >Price: ${price}</a></h2>
+                <h2 className="productPrice"><a>Price: ${price}</a></h2>
                 <h3 className="sub-name">{category}</h3>
                 <p>{description}</p>
                 <div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import './footer.css'
-import {FaShopify} from 'react-icons/fa'
+import {FaAdversal, FaFacebookSquare, FaGift, FaHandsHelping, FaSuitcase, FaTwitterSquare, FaYoutubeSquare} from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -34,9 +34,9 @@ const Footer = () => {
           </div>
           <div>
             <div className='footer-head'>SOCIAL</div>
-            <div>Facebook</div>
-            <div>Twitter</div>
-            <div>YouTube</div>
+            <div><FaFacebookSquare className='icon'/>Facebook</div>
+            <div><FaTwitterSquare className='icon'/>Twitter</div>
+            <div><FaYoutubeSquare className='icon'/>YouTube</div>
           </div>
           <div className='mail-address'>
             <div className='footer-head'>Mail Us:</div>
@@ -59,10 +59,10 @@ const Footer = () => {
         </div>
         <hr />
         <div className='footer-bottom'>
-          <div>Become a Seller</div>
-          <div>Advertise</div>
-          <div>Gift Cards</div>
-          <div>Help Center</div>
+          <div><FaSuitcase className='icon'/>Become a Seller</div>
+          <div><FaAdversal className='icon'/>Advertise</div>
+          <div><FaGift className='icon'/>Gift Cards</div>
+          <div><FaHandsHelping className='icon'/>Help Center</div>
           <div>&copy; eshppoing.com</div>
         </div>
     </div>

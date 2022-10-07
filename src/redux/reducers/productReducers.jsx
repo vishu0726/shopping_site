@@ -49,3 +49,10 @@ export const addToCartReducer = (state=initialCart, {type, payload}) => {
   }
   return state;
 }
+
+export const maintainCounterReducer = (state=0,{type,payload}) => {
+  if (type === 'maintain-counter') {
+    return state = payload;
+  }
+  return state;
+}
